@@ -1,1 +1,45 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Poiret+One&display=swap");
+
+html,
+body {
+  height: 100%;
+  /* overflow-x: hidden; */
+}
+
+:root {
+  --font-primary: "Montserrat", sans-serif;
+  --font-titles: "Poiret One", sans-serif;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --color-primary: #f1396d;
+  --color-secondary: #fbc5d8;
+  --color-tertiary: #fcd9e5;
+  /* --color-white: #ffeaf2; */
+  --color-white: #fff5f9;
+  --color-black: #382f32;
+}
+
+* {
+  font-family: var(--font-primary);
+  box-sizing: border-box;
+  margin: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  color: var(--color-black);
+  background-color: var(--color-white);
+}
+
+h1 {
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
