@@ -3,4 +3,6 @@ export interface Service {
   description: string;
   price: number;
   duration: string;
+  category: string;
+  image: string;
 }

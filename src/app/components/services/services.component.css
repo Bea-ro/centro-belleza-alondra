@@ -1,0 +1,16 @@
+.categories-list {
+  display: flex;
+  gap: 10px;
+}
+
+.category-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.category-name {
+  font-size: 14px;
+  text-align: center;
+}

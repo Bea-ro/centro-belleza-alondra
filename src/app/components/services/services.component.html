@@ -1,8 +1,8 @@
-<ul *ngFor="let service of services">
-  <li>
-    <h3>{{ service.name }}</h3>
-    <p>{{ service.description }}</p>
-    <p>{{ service.price }} €</p>
-    <p>{{ service.duration }}</p>
+<ul class="categories-list">
+  <li *ngFor="let category of categories" class="category-card">
+    <img [src]="category.image" [alt]="category.name" class="category-image" />
+    <h3 class="category-name">{{ category.name }}</h3>
   </li>
 </ul>
+
+<app-services-list></app-services-list>

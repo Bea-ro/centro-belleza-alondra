@@ -12,6 +12,8 @@ import { BookingComponent } from './components/booking/booking.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { MatCardModule } from '@angular/material/card';
+import { ServicesListComponent } from './services-list/services-list.component';
 
 @NgModule({
   declarations: [
@@ -24,8 +26,14 @@ import { FooterComponent } from './components/footer/footer.component';
     AboutComponent,
     ContactComponent,
     FooterComponent,
+    ServicesListComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
