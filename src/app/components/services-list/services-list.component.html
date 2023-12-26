@@ -1,0 +1,28 @@
+<ul class="services-list">
+  <li *ngFor="let service of services" class="service-card">
+    <mat-card>
+      <mat-card-header class="card-header">
+        <mat-card-title class="card-title">{{ service.name }}</mat-card-title>
+        <mat-card-subtitle class="price-duration"
+          >{{ service.price }} €
+          <span>{{ service.duration }}</span></mat-card-subtitle
+        >
+      </mat-card-header>
+
+      <img
+        mat-card-image
+        [src]="service.images[0]"
+        [alt]="service.name"
+        class="service-image"
+      />
+
+      <mat-card-content>
+        <p>{{ service.description }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-stroked-button>RESERVA</button>
+        <button mat-button>COMPARTE</button>
+      </mat-card-actions>
+    </mat-card>
+  </li>
+</ul>

@@ -1,0 +1,25 @@
+li {
+  padding: 12px;
+}
+
+mat-card-header {
+  div {
+    width: 100%;
+  }
+}
+
+mat-card-title {
+  font-family: var(--font-primary);
+  width: 100%;
+}
+
+mat-card-subtitle {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-primary);
+  width: 100%;
+}
+
+.mdc-card__media {
+  padding: 8px 0;
+}

@@ -1,8 +1,9 @@
-<ul class="categories-list">
+<ul class="categories-list" *ngIf="categories">
   <li *ngFor="let category of categories" class="category-card">
     <img [src]="category.image" [alt]="category.name" class="category-image" />
     <h3 class="category-name">{{ category.name }}</h3>
   </li>
 </ul>
-
+<p *ngIf="!categories">Cargando categorías</p>
+<button>Ver todos los servicios</button>
 <app-services-list></app-services-list>

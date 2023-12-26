@@ -1,6 +1,29 @@
 <ul>
-  <li><a [routerLink]="['/servicios']">Hola</a></li>
-  <li><a [routerLink]="['/reserva']"></a></li>
-  <li><a [routerLink]="['/conocenos']"></a></li>
-  <li><a [routerLink]="['/contacto']"></a></li>
+  <li [ngClass]="currentRoute === '/' ? 'selected-dot' : 'unselected-dot'">
+    <a [routerLink]="['/']"></a>
+  </li>
+  <li
+    [ngClass]="
+      currentRoute === '/servicios' ? 'selected-dot' : 'unselected-dot'
+    "
+  >
+    <a [routerLink]="['/servicios']"></a>
+  </li>
+  <li
+    [ngClass]="currentRoute === '/reserva' ? 'selected-dot' : 'unselected-dot'"
+  >
+    <a [routerLink]="['/reserva']"></a>
+  </li>
+  <li
+    [ngClass]="
+      currentRoute === '/conocenos' ? 'selected-dot' : 'unselected-dot'
+    "
+  >
+    <a [routerLink]="['/conocenos']"></a>
+  </li>
+  <li
+    [ngClass]="currentRoute === '/contacto' ? 'selected-dot' : 'unselected-dot'"
+  >
+    <a [routerLink]="['/contacto']"></a>
+  </li>
 </ul>

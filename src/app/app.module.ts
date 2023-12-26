@@ -13,7 +13,9 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MatCardModule } from '@angular/material/card';
-import { ServicesListComponent } from './services-list/services-list.component';
+import { MatButtonModule } from '@angular/material/button';
+import { ServicesListComponent } from './components/services-list/services-list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { ServicesListComponent } from './services-list/services-list.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
+    MatButtonModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -9,5 +9,12 @@ li {
   border-radius: 50%;
   height: 10px;
   width: 10px;
+}
+
+.selected-dot {
   background: var(--color-primary);
+}
+
+.unselected-dot {
+  border: 1px solid var(--color-primary);
 }
