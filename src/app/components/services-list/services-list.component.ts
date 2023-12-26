@@ -4,8 +4,12 @@ import { services } from '../../data/services.data';
 import { PriceToStringService } from '../../services/price-to-string.service';
 import { TouchEventService } from '../../services/touch-event.service';
 import { Router } from '@angular/router';
+import { MatCardModule } from '@angular/material/card';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 
 @Component({
+  standalone: true,
+  imports: [MatCardModule, NgOptimizedImage, CommonModule],
   selector: 'app-services-list',
   templateUrl: './services-list.component.html',
   styleUrls: ['services-list.component.css'],

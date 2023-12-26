@@ -1,5 +1,4 @@
-import { Component, inject } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +7,4 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent {
   title = 'centro-belleza-alondra';
-  http = inject(HttpClient);
-  ngOnInit() {
-    this.http.get('ulrapi');
-  }
 }

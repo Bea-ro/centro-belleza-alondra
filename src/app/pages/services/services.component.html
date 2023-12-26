@@ -1,6 +1,12 @@
 <ul class="categories-list" *ngIf="categories">
   <li *ngFor="let category of categories" class="category-card">
-    <img [src]="category.image" [alt]="category.name" class="category-image" />
+    <img
+      [ngSrc]="category.image"
+      [alt]="category.name"
+      height="75"
+      width="75"
+      class="category-image"
+    />
     <h3 class="category-name">{{ category.name }}</h3>
   </li>
 </ul>

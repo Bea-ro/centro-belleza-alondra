@@ -1,12 +1,17 @@
 import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { TouchEventService } from '../../services/touch-event.service';
+import { Contact } from 'src/app/models/contact';
+import { contact } from '../../data/contact.data';
+
 @Component({
-  selector: 'app-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css'],
+  standalone: true,
+  selector: 'app-contact',
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.css'],
 })
-export class AboutComponent {
+export class ContactComponent {
+  contact: Contact = contact;
   constructor(
     private router: Router,
     private touchEventService: TouchEventService
@@ -14,7 +19,6 @@ export class AboutComponent {
 
   @HostListener('touchstart', ['$event'])
   onTouchStart(event: TouchEvent): void {
-    console.log('evento');
     this.touchEventService.handleTouchStart(event);
   }
 
@@ -23,8 +27,8 @@ export class AboutComponent {
     this.touchEventService.handleTouchMove(
       event,
       this.router,
-      './reserva',
-      './contacto'
+      './conocenos',
+      './'
     );
   }
 }

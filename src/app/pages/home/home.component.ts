@@ -1,19 +1,27 @@
 import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { TouchEventService } from '../../services/touch-event.service';
+
 @Component({
-  selector: 'app-booking',
-  templateUrl: './booking.component.html',
-  styleUrls: ['./booking.component.css'],
+  standalone: true,
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css'],
 })
-export class BookingComponent {
+export class HomeComponent {
   constructor(
     private router: Router,
     private touchEventService: TouchEventService
   ) {}
 
+  @HostListener('scroll', ['$event'])
+  onScrill(event: Event): void {
+    console.log('evento');
+  }
+
   @HostListener('touchstart', ['$event'])
   onTouchStart(event: TouchEvent): void {
+    console.log('evento');
     this.touchEventService.handleTouchStart(event);
   }
 
@@ -22,8 +30,8 @@ export class BookingComponent {
     this.touchEventService.handleTouchMove(
       event,
       this.router,
-      './servicios',
-      './conocenos'
+      './',
+      './servicios'
     );
   }
 }
